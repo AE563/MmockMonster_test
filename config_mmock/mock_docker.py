@@ -4,8 +4,7 @@ import os
 
 config_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                            ''))
-print(os.path.abspath(os.path.join(os.path.dirname(__file__))))
-print(config_path)
+
 client = docker.from_env()
 container = client.containers.run("jordimartin/mmock",
                                   detach=True,

@@ -1,13 +1,18 @@
----
-request:
-  method: GET
-  path: "/v2/items"
-response:
-  statusCode: 200
-  headers:
-    Content-Type:
-    - application/json
-  body: '[
+{
+	"request": {
+		"method": "GET",
+		"path": "/v2/items",
+		"queryStringParameters": {
+			"ids": [ "94123" ],
+		},
+	},
+	"response": {
+		"statusCode": 200,
+		"headers": {
+					   "ids": ["94123"],
+			"Content-Type":["application/json"]
+		},
+		"body": '[
     {
         "name": "Dark Matter Greatsword Skin",
         "description": "Double-click to apply this look to any other greatsword.",
@@ -40,5 +45,5 @@ response:
         }
     }
 ]'
-
-
+	}
+}
